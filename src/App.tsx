@@ -1,26 +1,25 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { useState } from 'react';
+import { API } from './API';
+import * as C from './App.styles';
+import { Routers } from './routers/Routers';
 
-function App() {
+const App = () => {
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+        <C.Header>
+          Galeria de Fotos
+        </C.Header>   
+        <C.Container>
+          <Routers />
+        </C.Container>
+        <C.Footer>
+        <a href="https://github.com/Luiz-Hen-Reis" target="_blank">Luiz-Hen-Reis</a> 
+        <br />
+        Todos os Direitos Reservados.
+        </C.Footer> 
     </div>
-  );
+  )
 }
 
 export default App;
